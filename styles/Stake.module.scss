@@ -1,0 +1,58 @@
+@import 'variables';
+
+.stakeCard {
+    background-color: #0C0C0C;
+    border-radius: 10px;
+    min-height: 100px;
+    padding: 16px 4px;
+}
+
+.image {
+    border-radius: 10px;
+}
+
+.isStaked {
+    border: 1px solid $primary;
+}
+
+@media screen and (min-width: 768px) {
+	.stakeCard {
+        padding: 16px 8px;
+    }
+}
+
+.reward {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(50% 50% at 50% 50%, #C4C4C4 0%, rgba(196, 196, 196, 0) 100%);
+        opacity: 0.2;
+    }
+}
+
+
+// Stake Stat
+
+.value {
+    margin-right: 8px;
+    font-size: 36px;
+    font-weight: 400;
+    height: 40px;
+    line-height: 41px;
+}
+
+.desc {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+

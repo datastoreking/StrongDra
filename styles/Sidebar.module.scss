@@ -1,0 +1,129 @@
+@import 'variables';
+
+@keyframes pulsate {
+    0%   { box-shadow: 0 0 0 4px #44444493; }
+    50%  { box-shadow: 0 0 0 16px #44444493; }
+    100% { box-shadow: 0 0 0 4px #44444493; }
+}
+
+@-webkit-keyframes pulsate {
+    0%   { box-shadow: 0 0 0 4px #44444493; }
+    50%  { box-shadow: 0 0 0 16px #44444493; }
+    100% { box-shadow: 0 0 0 4px #44444493; }
+}
+
+// SIDEBAR MOBILE BUTTON
+.sidebarToggle {
+    cursor: pointer;
+	visibility: hidden;
+	z-index: 35;
+	position: fixed;
+	bottom: 24px;
+	left: 50%; margin-left: -30px;
+	width: 60px;
+	height: 60px;
+    font-size: 18px;
+    color: $primary;
+    border-radius: 50%;
+    border: 3px solid $primary;
+    background-color: #000;
+	animation: pulsate 2s ease-out infinite;
+	transition: all 300ms ease;
+}
+
+// SIDEBAR OVERLAY
+.overlay {
+	// visibility: hidden;
+	z-index: 25;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.9;
+	transition: all 300ms ease-out;
+}
+
+.sidebar {
+	overflow-x: auto;
+	position: fixed;
+	z-index: 30;
+	top: 0;
+	left: 0;
+	width: 212px;
+	height: 100%;
+	background-color: $sidebar-background-color;
+	transition: left 300ms ease;
+
+	// BRAND 
+	&Brand {
+		background-color: #242424;
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	// Menu List
+	&MenuList {
+		padding: 0 16px;
+
+		li {
+			margin-bottom: 16px;
+		}
+
+		a {
+			border: 1px solid transparent;
+		}
+
+		small {
+			font-weight: 600;
+			font-size: 11px;
+			color: $primary;
+		}
+
+		.fa {
+			width: 32px;
+            margin-right: 8px;
+		}
+
+		a.isActive {
+            color: $primary;
+			background: none;
+			background-image: radial-gradient(circle at 100% 100%, transparent 10px, #141414 10px, #141414 11px, transparent 11px), linear-gradient(to right, #141414, #fbc21b), radial-gradient(circle at 0% 100%, transparent 10px, #fbc21b 10px, #fbc21b 11px, transparent 11px), linear-gradient(to bottom, #fbc21b, #fbc21b), radial-gradient(circle at 0% 0%, transparent 10px, #fbc21b 10px, #fbc21b 11px, transparent 11px), linear-gradient(to left, #fbc21b, #141414), radial-gradient(circle at 100% 0%, transparent 10px, #141414 10px, #141414 11px, transparent 11px), linear-gradient(to top, #141414, #141414);
+			background-size: 11px 11px, calc(100% - 22px) 1px, 11px 11px, 1px calc(100% - 22px);
+			background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;
+			background-repeat: no-repeat;
+
+            &:hover {
+                color: $primary;
+            }
+		}
+	}
+}
+
+
+// ACTIVE SIDEBAR
+@media screen and (max-width: 1024px) {
+	.sidebarToggle {
+		visibility: visible;
+	}
+
+    .sidebarToggled {
+        left: 300px;
+        bottom: 50%;
+        margin-bottom: -30px;
+    }
+
+	.sidebar {
+		left: -100%;
+	}
+
+    .sidebarIsActive {
+        left: 0;
+    }
+}
+
+

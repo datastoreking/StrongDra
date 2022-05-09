@@ -1,0 +1,73 @@
+// INITIAL VARIABLES
+// $grey-darker: #02030A;
+// $grey-dark: #150029;
+// $grey: #0C0E28;
+// $grey-light: #141526;
+// $grey-lighter: #212232;
+// $grey-lightest: #1E204A;
+
+// COLOR VARIABLES
+$yellow: #FBC21B;
+
+	// Color Overides
+	$primary: $yellow;
+	$accent: #946FFF;
+
+
+
+// *** GLOBALS ***
+$body-background-color: #000;
+$body-family: 'Saira', sans-serif;
+$body-color: #fff;
+$link: $primary;
+$link-hover: $primary;
+$strong-color: #fff;
+
+
+
+// *** SIDEBAR ***
+	// Base
+	$sidebar-background-color: #141414;
+
+
+$menu-item-color: #fff;
+$menu-item-hover-color: $primary;
+$menu-item-hover-background-color: transparent;
+
+$menu-item-radius: 10px;
+
+
+
+
+
+
+
+
+// *** NAVBAR ***
+$navbar-height: 4rem;
+
+// *** ELEMENTS ***
+
+	// BOX
+	$box-color: #fff;
+	$box-background-color: #121212;
+	$box-padding: 8px;
+
+	// TITLE
+	$title-color: $primary;
+	$title-family: 'Saira Extra Condensed', sans-serif;
+	$title-weight: 900;
+
+	$subtitle-color: #fff;
+	$subtitle-family: 'Saira Extra Condensed', sans-serif;
+
+
+// Backdrop
+$modal-background-background-color: rgba(10, 10, 10, 0.95);
+
+// Body Backgrounds
+$modal-card-head-background-color: #141414;
+$modal-card-body-background-color: #242424;
+
+// Head
+$modal-card-title-color: #fff;

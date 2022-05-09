@@ -1,0 +1,115 @@
+// *** VARIABLES ***
+@import 'variables';
+
+// *** FONTS ***
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@400;600;900&display=swap');
+
+@import '~bulma/bulma';
+
+// Buttons
+.button {
+	height: auto;
+	font-weight: 600;
+}
+
+.button.is-accent {
+    background-color: $accent;
+    border-color: transparent;
+    color: #fff;
+}
+
+// Borders
+.border-bottom {
+	border-bottom: 1px solid #141414;
+}
+
+.main {
+	transition: margin-left 300ms ease;
+	padding-bottom: 110px;
+
+	.container {
+		padding: 16px;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	.main {
+		margin-left: 212px;
+		padding-bottom: 0;
+
+		.container {
+			padding: 48px;
+		}
+	}
+}
+
+// BOX
+.box {
+	box-shadow: -8px -8px 0px #090909;
+}
+
+// SWIPER
+.swiper-button-disabled {
+	cursor: not-allowed;
+	opacity: 0.3;
+	background-color: transparent !important;
+	color: #fff !important;
+}
+
+// MODAL
+.modal-card-head {
+	border-bottom: none;
+}
+
+.modal-card-title {
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.modal-card-foot {
+	border-top: none;
+}
+
+
+
+.lds-ring {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+  }
+  .lds-ring div {
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border: 8px solid #fff;
+	border-radius: 50%;
+	animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+	border-color: #fff transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+	animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+	animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+	animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
+  
+
+.loading_center{
+    text-align: center;
+}
